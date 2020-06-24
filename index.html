@@ -16,33 +16,42 @@
 </head>
 
 <body>
-    <div class="brackets">
-        <a>HOME</a>
-        <a href="#aboutMe">ABOUT ME</a>
-        <a href="#edu">EDUCATION</a>
-        <a href="#proje">PROJECTS</a>
-        <a href="#contact">CONTACT</a>
-    </div>
-
-    <div class="absolute plane" title="heyyyyyyy">
-        <ul class="no-bullet">
-            <li class="plane-body">
-                <ul class="inline-list">
-                    <li class="circle"></li>
-                    <li class="circle"></li>
-                    <li class="circle"></li>
-                    <li class="circle"></li>
-                    <li class="circle"></li>
-                </ul>
-            </li>
-
-            <li class="wing1"></li>
-            <li class="wing1 flipwing"></li>
-            <li class="absolute teal"></li>
-        </ul>
+    <div class="dropdown">
+        <span><i class="fas fa-code"></i></span>
+        <div class="dropdown-content">
+            <a href="#aboutMe">ABOUT ME</a><br>
+            <a href="#mySkills">MY SKILLS</a><br>
+            <a href="#projects">PROJECTS</a><br>
+            <a href="#contact">CONTACT</a><br>
+            <a href="#"><i class="fas fa-terminal" id="dropdown-i"></i></a>
+        </div>
     </div>
 
     <div class="intro">
+        <div class="brackets">
+            <a href="#aboutMe">ABOUT ME</a>
+            <a href="#mySkills">MY SKILLS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+
+        <div class="absolute plane" title="heyyyyyyy">
+            <ul class="no-bullet">
+                <li class="plane-body">
+                    <ul class="inline-list">
+                        <li class="circle"></li>
+                        <li class="circle"></li>
+                        <li class="circle"></li>
+                        <li class="circle"></li>
+                        <li class="circle"></li>
+                    </ul>
+                </li>
+
+                <li class="wing1"></li>
+                <li class="wing1 flipwing"></li>
+                <li class="absolute teal"></li>
+            </ul>
+        </div>
         <div class="cloud top"><img
                 src="https://github.com/muratbigin/imageDatabase/blob/master/toppng.com-blue-cartoon-cloud-600x354.png?raw=true"
                 alt="cloud-img"></div>
@@ -70,52 +79,67 @@
                 my
                 skills in web
                 development.</p>
-            <div class="icons">
-                <a href="https://www.linkedin.com/in/murat-bigin-08439419a/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/murat-bigin-08439419a/" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/murat-bigin-08439419a/" target="_blank">
-                    <i class="fab fa-stack-overflow"></i>
-                </a>
-            </div>
-
         </article>
-        <article id="edu">
-            <h3>EDUCATION</h3>
-            <p>const newEmployee = {
-                motivated: true,
-                available: true,
-                quickLearning: true,
-                name: "Murat Bigin",
-                skills: [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "JAVA"
-                "GitHub",
-                "MongoDB",
-                "SQL",
-                "Dutch",
-                "English",
-                ],
-                projects: {
-                1: "https://fathomless-dusk-90964.herokuapp.com/",
-                2:
-                "https://www.linkedin.com/redir/general-malware-page?url=https%3A%2F%2Freact-my-burger-f01f7%2efirebaseapp%2ecom%2F",
-                },
+        <article id="mySkills">
+            <h2>My Skills</h2>
+            <p>const newEmployee = {<br>
+                <span class="indent-1">motivated: true,</span><br>
+                <span class="indent-1">available: true,</span><br>
+                <span class="indent-1">quickLearning: true,</span><br>
+                <span class="indent-1">name: "Murat Bigin",</span><br>
+                <span class="indent-1">skills: [</span><br>
+                <span class="indent-2">"HTML",</span><br>
+                <span class="indent-2">"CSS",</span><br>
+                <span class="indent-2">"JavaScript",</span><br>
+                <span class="indent-2">"JAVA"</span><br>
+                <span class="indent-2">"GitHub",</span><br>
+                <span class="indent-2">"MongoDB",</span><br>
+                <span class="indent-2">"SQL",</span><br>
+                <span class="indent-2">"Dutch",</span><br>
+                <span class="indent-2">"English",</span><br>
+                <span class="indent-1">],</span><br>
                 };
             </p>
-        </article>
-        <article id="proje">
-            <div>
-                <a href="https://muratbigin.github.io/mysite/" target="_blank">
-                    <img src="https://github.com/muratbigin/imageDatabase/blob/master/mysite.gif?raw=true"
-                        alt="mysite" />
-                </a>
+
+            <div class="skills">
+                <div class="languages">
+                    <h5>Languages I speak:</h5>
+                    <a href="https://developer.mozilla.org/nl/docs/Web/JavaScript" target="_blank">
+                        <i class="fab fa-js"></i>
+                    </a>
+                    <a href="https://nodejs.org/en/" target="_blank">
+                        <i class="fab fa-node"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-html5"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-css3-alt"></i>
+                    </a>
+                    <a href="https://www.java.com/nl/" target="_blank">
+                        <i class="fab fa-java"></i>
+                    </a>
+
+                </div>
+                <div class="dev-tools">
+                    <h5>Dev Tools:</h5>
+                    <a href="https://github.com/muratbigin" target="_blank">
+                        <i class="fab fa-git"></i>
+                    </a>
+                    <a href="https://getbootstrap.com/" target="_blank">
+                        <i class='fab fa-bootstrap'></i>
+                    </a>
+
+                    <a> <i class='fas fa-terminal' title="terminal"></i></a>
+
+                </div>
+
             </div>
+            <img src="https://github.com/muratbigin/mysite/blob/master/images/analysis%20(1).png?raw=true">
+        </article>
+        <article id="projects">
+            <h2>Projects</h2>
+
             <div>
                 <a href="https://muratbigin.github.io/hackyourfuture-website/hackyrftr.html" target="_blank">
                     <img src="https://github.com/muratbigin/imageDatabase/blob/master/hackyourfuture.gif?raw=true"
@@ -137,14 +161,35 @@
 
         </article>
         <article id="contact">
-            <h3>Fishing Challenge</h3>
-            <p>balik tutmak dogada yalniz kalmak hep hayalimi susleyen aktivitelerdir. Hayatin bize getirdiklerinden
-                dolayi
-                bu tutkularimi kismen yapiyor olabilirim, ama birgun mutlaka tutkunu oldugum herseye kavusacagim
-                inancindayim.
+
+            <h2>Get In Touch</h2>
+
+            <p class="contact-message">
+                “Never underestimate the empowering effect of human connection.
+                All you need is that one person, who understands you completely, believes in you and makes you feel
+                loved for what you
+                are, to enable you - to unfold the miraculous YOU.”<br>
+                <em>― Drishti Bablani, Wordions</em>
             </p>
+            <a class="btn" href="mailto:muratbigin00@gmail.com">CONTACT ME</a>
+
         </article>
     </section>
+    <footer class="bottom-container">
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/murat-bigin-08439419a/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/muratbigin" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://stackoverflow.com/users/13478743/murat-bigin" target="_blank">
+                <i class="fab fa-stack-overflow"></i>
+            </a>
+        </div>
+        <p class="copyright">© 2020 Murat Bigin.</p>
+
+    </footer>
 
 </body>
 

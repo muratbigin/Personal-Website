@@ -1,27 +1,62 @@
 body {
-  color: #40514e;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   text-align: center;
   font-family: "Merriweather", serif;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: "Sacramento", cursive;
-  color: #00695c;
+  color: #006390;
 }
 
-h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  color: #00796b;
-  font-weight: normal;
-}
 p {
-  line-height: 2;
+  line-height: 2.4;
 }
-.intro {
-  margin: 300px 140px;
+a {
+  text-decoration: none;
+}
+.dropdown {
+  position: fixed;
+  display: inline-block;
+  left: 75px;
+  top: 40px;
+  z-index: 9999;
+}
+.dropdown .fa-code {
+  font-size: 2.5em;
+  color: #006390;
+}
+#dropdown-i {
+  font-size: 2em;
+  color: #006390;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  text-align: left;
+  width: 100px;
+  min-width: 70px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+  padding: 12px 16px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  font-size: 1em;
+  line-height: 2.3;
+  color: #006390;
+}
+.dropdown-content a:hover,
+#dropdown-i:hover,
+.fa-code:hover,
+.bottom-container i {
+  color: orange;
 }
 
 .brackets {
@@ -35,7 +70,7 @@ p {
 }
 
 .brackets a {
-  color: rgb(14, 13, 13);
+  color: #006390;
   text-decoration: none;
   font: 20px Raleway;
   margin: 0 50px;
@@ -61,13 +96,13 @@ div.brackets a:after {
 div.brackets a:before {
   left: 0px;
   transform: translateX(10px);
-  color: #00695c;
+  color: orange;
 }
 
 div.brackets a:after {
   right: 0px;
   transform: translateX(-10px);
-  color: #00695c;
+  color: orange;
 }
 div.brackets a:nth-child(1):before {
   content: "{";
@@ -129,12 +164,17 @@ ul.no-bullet {
 }
 
 .plane {
-  top: 15%;
+  top: 25%;
   left: 80px;
   -webkit-animation: planeanimate 30s linear infinite;
   -moz-animation: planeanimate 30s linear infinite;
   -o-animation: planeanimate 30s linear infinite;
-  animation: planeanimate 30s linear infinite;
+  animation: planeanimate 17s linear infinite;
+  transition: all 0.5s;
+  z-index: 9999;
+}
+.plane:hover {
+  transform: rotate(-18deg) scale(3);
 }
 
 @-webkit-keyframes planeanimate {
@@ -251,11 +291,31 @@ ul.no-bullet {
 /* Intro */
 
 .intro {
-  background-color: #a2e0fd;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 204, 255, 1) 10%,
+    rgba(25, 209, 255, 1) 20%,
+    rgba(51, 214, 255, 1) 30%,
+    rgba(77, 219, 255, 1) 40%,
+    rgba(102, 224, 255, 1) 50%,
+    rgba(128, 229, 255, 1) 60%,
+    rgba(153, 235, 255, 1) 70%,
+    rgba(179, 240, 255, 1) 80%,
+    rgba(204, 245, 255, 1) 90%,
+    rgba(230, 250, 255, 1) 100%
+  );
   position: relative;
   padding-top: 80px;
+  padding-bottom: 100px;
+  z-index: 1;
+}
+.intro h2 {
+  margin-top: -20px;
+  margin-bottom: 70px;
+  color: orange;
 }
 .mountain {
+  transform: scale(1.2);
   position: relative;
   text-align: center;
   right: 30px;
@@ -263,61 +323,110 @@ ul.no-bullet {
 }
 .cloud {
   position: absolute;
-  animation: cloud 10s linear infinite;
+  animation: cloud 21s linear infinite;
 }
 .cloud img {
-  filter: grayscale(0.9);
+  filter: drop-shadow(8px 12px 16px black);
   width: 100%;
+  opacity: 0.7;
 }
 .top {
   width: 100px;
   top: 5%;
-  left: 180px;
+  left: 400px;
+  animation: cloud 25s linear infinite;
 }
 .middle {
-  width: 130px;
-  top: 15%;
-  left: 480px;
+  width: 150px;
+  top: 25%;
+  left: 400px;
+  animation: cloud 27s linear infinite;
 }
 .bottom {
-  width: 160px;
-  top: 25%;
-  left: 180px;
+  width: 210px;
+  top: 50%;
+  left: 200px;
+  z-index: 999;
 }
 @keyframes cloud {
   from {
-    transform: translateX(0%);
+    margin-left: -100%;
   }
 
   to {
-    transform: translateX(100%);
+    margin-left: 100%;
   }
 }
 
 /* ///////////////////////// */
 
 .middle-container {
-  width: 80%;
   height: auto;
   margin: 0 auto;
-  background-color: #66bfbf;
-  padding: 60px;
-  box-shadow: 0 0 21px 17px rgba(68, 68, 68, 0.8);
+  background: linear-gradient(
+    -180deg,
+    rgba(0, 204, 255, 1) 10%,
+    rgba(25, 209, 255, 1) 20%,
+    rgba(51, 214, 255, 1) 30%,
+    rgba(77, 219, 255, 1) 40%,
+    rgba(102, 224, 255, 1) 50%,
+    rgba(128, 229, 255, 1) 60%,
+    rgba(153, 235, 255, 1) 70%,
+    rgba(179, 240, 255, 1) 80%,
+    rgba(204, 245, 255, 1) 90%,
+    rgba(230, 250, 255, 1) 100%
+  );
 }
+
 article {
-  width: 100%;
+  width: 80%;
   height: 100vh;
+  margin: auto;
   font-size: large;
-  border-bottom: 2px dashed red;
+  padding-top: 80px;
 }
 article h2 {
   font-size: 2rem;
   margin-bottom: 60px;
 }
 #aboutMe {
-  margin-top: 160px;
+  margin-top: -27px;
 }
 
+#mySkills p {
+  text-align: left;
+  float: left;
+  font-size: 1.2rem;
+  color: #006390;
+}
+#mySkills h2 {
+  text-align: center;
+}
+#mySkills img {
+  transform: scale(1.2);
+  margin-top: 100px;
+  margin-left: -260px;
+}
+.skills {
+  margin-top: 80px;
+  margin-right: -260px;
+}
+.skills a {
+  margin-right: 30px;
+}
+.skills h5 {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+.dev-tools {
+  margin-top: 80px;
+}
+.indent-1 {
+  margin-left: 50px;
+}
+.indent-2 {
+  margin-left: 80px;
+}
 #aboutMe img {
   width: 201px;
   height: 192px;
@@ -326,28 +435,35 @@ article h2 {
   margin-right: 75px;
   margin-left: 10px;
   filter: grayscale(1);
+  animation: line 3s linear infinite;
 }
-#proje {
+#projects {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px 50px;
+  grid-template-areas:
+    "header header"
+    "firstrow firstrow"
+    "double double";
+  gap: 10px 10px;
 }
-#proje div {
-  margin-top: 200px;
+#projects h2 {
+  grid-area: header;
 }
-#proje div img {
+#projects div:nth-of-type(1) {
+  grid-area: firstrow;
+}
+#projects div {
+  justify-self: center;
+  width: 400px;
+  height: 300px;
+}
+#projects img {
   width: 100%;
-  height: 60%;
+  height: 90%;
   transition: all 0.5s;
 }
-.plane {
-  transition: all 0.5s;
-}
-.plane:hover {
-  transform: rotate(-18deg) scale(3);
-}
-#proje div:hover img,
-#proje div:focus img {
+
+#projects div:hover img,
+#projects div:focus img {
   transform: scale(1.8);
   box-shadow: 0 0 21px 17px rgba(68, 68, 68, 0.8);
 }
@@ -366,4 +482,30 @@ article h2 {
 .far {
   font-size: 3em;
   color: #0b0c0c;
+}
+
+#contact {
+  height: 65vh;
+}
+.contact-message {
+  width: 40%;
+  margin: 40px auto 60px;
+}
+.btn {
+  background-color: #006390;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+.btn:hover {
+  text-decoration: none;
+  background-color: orange;
+  color: #006390;
+}
+.bottom-container {
+  background-color: #006390;
+  padding: 50px 0 20px;
 }
